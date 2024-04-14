@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.el-header {
+  z-index: 1000;
+  height: 60px;
+  background-color: azure;
+}
+
+.el-main {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  background-color: beige;
+}
