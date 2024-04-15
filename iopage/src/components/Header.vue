@@ -9,16 +9,16 @@ import router from '@/router/router.js'
                 <div class="header-title">kyliancc</div>
             </div>
             <div class="header-item">
-                <el-link @click="router.push('/')">Home</el-link>
+                <a @click="router.push('/')">Home</a>
             </div>
             <div class="header-item">
-                <el-link @click="router.push('/about')">About</el-link>
+                <a @click="router.push('/about')">About</a>
             </div>
             <div class="header-item">
-                <el-link @click="router.push('/feature')">Feature</el-link>
+                <a @click="router.push('/feature')">Feature</a>
             </div>
             <div class="header-item">
-                <el-link @click="router.push('/note')">Note</el-link>
+                <a @click="router.push('/note')">Note</a>
             </div>
         </div>
         <div class="header-right">
@@ -28,6 +28,8 @@ import router from '@/router/router.js'
 </template>
 
 <style scoped>
+@import "@/assets/global.scss";
+
 .header-container {
     display: flex;
     width: 100%;
@@ -52,7 +54,7 @@ import router from '@/router/router.js'
     font-size: 18px;
 }
 
-.el-link {
+.header-item > a {
     margin: 0 25px;
     font-size: 16px;
     font-family: Inter, math;

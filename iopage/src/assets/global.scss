@@ -1,4 +1,18 @@
+:root {
+  --kc-color-hover: #ffbd81;
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: var(--kc-color-hover);
+  cursor: pointer;
 }

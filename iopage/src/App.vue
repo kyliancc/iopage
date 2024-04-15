@@ -30,14 +30,15 @@ import Footer from "@/components/Footer.vue";
     top: 0;
     height: 60px;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: var(--el-box-shadow-light);
+    backdrop-filter: blur(10px);
 }
 
 .el-main {
     z-index: 1;
     background-color: whitesmoke;
-    padding: 0;
+    padding: 60px 0 0 0;
 }
 
 .el-footer {

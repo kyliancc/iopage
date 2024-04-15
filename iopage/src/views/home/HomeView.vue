@@ -17,7 +17,6 @@ import router from '@/router/router.js'
                     <div class="block about-page-block">
                         <div class="block-title">About this site..</div>
                         <div class="block-text">
-                            <br>
                             <span style="font-weight: bold">Home: </span>
                             <span>The home page.</span>
                             <hr>
@@ -34,28 +33,121 @@ import router from '@/router/router.js'
                 </div>
 
                 <div class="recommend-container">
-                    <div class="block recommend-item"></div>
-                    <div class="block recommend-item"></div>
-                    <div class="block recommend-item"></div>
-                    <div class="block recommend-item"></div>
-                    <div class="block recommend-item"></div>
+                    <a class="block recommend-item" href="#">
+                        <img class="recommend-image" alt="recommend" src="@/assets/yali.png">
+                        <div class="recommend-title">I love you</div>
+                        <div class="recommend-description">I'm just writing something randomly.</div>
+                    </a>
+
+                    <a class="block recommend-item" href="#">
+                        <img class="recommend-image" alt="recommend" src="@/assets/yali.png">
+                        <div class="recommend-title">Are programmers really under a HUGE pressure?</div>
+                        <div class="recommend-description">At least I feel so.</div>
+                    </a>
+                    <a class="block recommend-item" href="#"></a>
+                    <a class="block recommend-item" href="#"></a>
+                    <a class="block recommend-item" href="#"></a>
                 </div>
             </div>
             <div class="home-aside-container">
                 <div class="block">
                     <div class="block-title">About me..</div>
                     <div class="about-text">
-                        <p>- 16-year-old</p>
-                        <p>- Computer Science, Automation lover</p>
-                        <p>- Active in Central South University</p>
+                        <p>- Born in 2008.</p>
+                        <p>- Computer Science and Automation lover.</p>
+                        <p>- Active in Central South University.</p>
                         <hr>
                         <p>I'm a lazy guy, maybe..</p>
                         <p>I mainly do Artificial Intelligence.</p>
                         <p>Also do something about Web Frontend/Backend, even Embedded.</p>
                     </div>
                     <div class="about-link">
-                        <el-button type="info" plain @click="router.push('/about')">Watch more</el-button>
+                        <a @click="router.push('/about')" style="text-decoration: underline">View more..</a>
                     </div>
+                </div>
+                <div class="block category-block">
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Microeconomics</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Electronics</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                    <div class="category-image">
+                        <img alt="category" src="@/assets/senpai.png">
+                    </div>
+                    <div class="category-text">
+                        <span>Artificial Intelligence</span>
+                    </div>
+                </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Web Development</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Mathematics</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="block category-block">
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Microeconomics</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Electronics</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Artificial Intelligence</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Web Development</span>
+                        </div>
+                    </a>
+                    <a class="category-item">
+                        <div class="category-image">
+                            <img alt="category" src="@/assets/senpai.png">
+                        </div>
+                        <div class="category-text">
+                            <span>Mathematics</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -64,9 +156,7 @@ import router from '@/router/router.js'
 </template>
 
 <style scoped>
-#homeView {
-    margin-top: 60px;
-}
+@import "@/assets/global.scss";
 
 .home-container1 {
     display: flex;
@@ -83,6 +173,7 @@ import router from '@/router/router.js'
 
 .main-top-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .title-block {
@@ -99,7 +190,6 @@ import router from '@/router/router.js'
     box-shadow: var(--el-box-shadow-lighter);
     background-color: white;
     margin: 20px;
-    padding: 20px;
     font-family: Inter, math;
     overflow: hidden;
 }
@@ -108,22 +198,22 @@ import router from '@/router/router.js'
     font-family: Inter, math;
     font-weight: bold;
     font-size: 25px;
-    margin: 10px;
+    margin: 30px 30px 10px;
 }
 
 .block-text {
-    padding: 0 10px;
+    padding: 20px 30px;
 }
 
 .title {
     display: flex;
     flex-direction: column;
     font-family: Inter, math;
-    padding: 30px;
+    padding: 50px;
 }
 
 .title1 {
-    margin-left: 8%;
+    margin-left: 5%;
     font-size: 45px;
 }
 
@@ -151,12 +241,59 @@ import router from '@/router/router.js'
 
 .recommend-item {
     flex: 1 300px;
-    height: 150px;
+    height: 250px;
+}
+
+.recommend-item > .el-link__inner {
+    display: block;
+}
+
+.recommend-item .recommend-image {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.recommend-item .recommend-title {
+    font-weight: bold;
+    margin: 10px 20px;
+}
+
+.recommend-item .recommend-description {
+    margin: 10px 30px;
+}
+
+.about-text {
+    padding: 0 30px;
 }
 
 .about-link {
     display: flex;
     justify-content: flex-end;
-    padding: 0 20px;
+    padding: 0 20px 20px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.category-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.category-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-text {
+    margin: 15px;
+    font-weight: bold;
 }
 </style>
