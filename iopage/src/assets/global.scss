@@ -16,3 +16,23 @@ a:hover {
   color: var(--kc-color-hover);
   cursor: pointer;
 }
+
+.block {
+  border-radius: 4px;
+  box-shadow: var(--el-box-shadow-lighter);
+  background-color: white;
+  margin: 20px;
+  font-family: Inter, math;
+  overflow: hidden;
+}
+
+.block-title {
+  font-family: Inter, math;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 30px 30px 10px;
+}
+
+.block-text {
+  padding: 20px 30px;
+}

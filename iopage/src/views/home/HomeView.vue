@@ -4,7 +4,7 @@ import router from '@/router/router.js'
 
 <template>
     <div id="homeView">
-        <div class="home-container1">
+        <div class="home-container">
             <div class="home-main-container">
                 <div class="main-top-container">
                     <div class="block title-block">
@@ -54,7 +54,7 @@ import router from '@/router/router.js'
                     <div class="block-title">About me..</div>
                     <div class="about-text">
                         <p>- Born in 2008.</p>
-                        <p>- Computer Science and Automation lover.</p>
+                        <p>- Computer Science and Automation enthusiast.</p>
                         <p>- Active in Central South University.</p>
                         <hr>
                         <p>I'm a lazy guy, maybe..</p>
@@ -158,7 +158,7 @@ import router from '@/router/router.js'
 <style scoped>
 @import "@/assets/global.scss";
 
-.home-container1 {
+.home-container {
     display: flex;
     padding: 50px 15%;
 }
@@ -183,26 +183,6 @@ import router from '@/router/router.js'
 
 .about-page-block {
     flex: 1;
-}
-
-.block {
-    border-radius: 4px;
-    box-shadow: var(--el-box-shadow-lighter);
-    background-color: white;
-    margin: 20px;
-    font-family: Inter, math;
-    overflow: hidden;
-}
-
-.block-title {
-    font-family: Inter, math;
-    font-weight: bold;
-    font-size: 25px;
-    margin: 30px 30px 10px;
-}
-
-.block-text {
-    padding: 20px 30px;
 }
 
 .title {
