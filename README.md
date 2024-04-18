@@ -7,3 +7,8 @@ Source codes of my io page.
 - Vue Router
 - Element Plus
 
+### Fonts
+
+Inter (free font)
+
+Source Han Serif (free font)

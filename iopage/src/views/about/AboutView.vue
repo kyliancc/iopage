@@ -40,44 +40,44 @@ const getLearnLabelStyle = () => {
         <div class="about-container">
             <div class="about-row row1">
                 <div class="block about-block11">
-                    <div class="about-title1">About</div>
-                    <div class="about-title2">me..</div>
+                    <div class="about-title1">{{ $t('about.title.title1') }}</div>
+                    <div class="about-title2">{{ $t('about.title.title2') }}</div>
                 </div>
                 <div class="block about-block12">
-                    <div class="block-title">Introduction</div>
+                    <div class="block-title">{{ $t('about.intro.title') }}</div>
                     <div class="about-text">
-                        <p>Hiiii, I'm kyliancc.</p>
-                        <p>A 16-year-old high school student.</p>
-                        <p>Computer Science & Automation enthusiast.</p>
-                        <p>Now Active in Central South University.</p>
-                        <p>Mainly do Artificial Intelligence.</p>
+                        <p>{{ $t('about.intro.intro1') }}</p>
+                        <p>{{ $t('about.intro.intro2') }}</p>
+                        <p>{{ $t('about.intro.intro3') }}</p>
+                        <p>{{ $t('about.intro.intro4') }}</p>
+                        <p>{{ $t('about.intro.intro5') }}</p>
                     </div>
                 </div>
                 <div class="block about-block13">
-                    <div class="block-title">Basic Information</div>
+                    <div class="block-title">{{ $t('about.basic.title') }}</div>
                     <div class="about-text">
-                        <p>Gender: Male.</p>
-                        <p>Pronoun: He/Him.</p>
-                        <p>Birthday: March 27th, 2008.</p>
-                        <p>Country: China.</p>
-                        <p>16Personality: INTP-A.</p>
+                        <p>{{ $t('about.basic.basic1') }}</p>
+                        <p>{{ $t('about.basic.basic2') }}</p>
+                        <p>{{ $t('about.basic.basic3') }}</p>
+                        <p>{{ $t('about.basic.basic4') }}</p>
+                        <p>{{ $t('about.basic.basic5') }}</p>
                     </div>
                 </div>
             </div>
             <div class="about-row row2">
                 <div class="block about-block21">
-                    <div class="block-title">Comments</div>
+                    <div class="block-title">{{ $t('about.comment.title') }}</div>
                     <div class="about-text">
-                        <p>I'm the guy who learns via the interest lol.</p>
-                        <p>Sometimes I play piano and draw something.</p>
-                        <p>I play galgames and rhythm games.</p>
-                        <p>I like discovering and creating.</p>
-                        <p>I'm a bit introverted, casual, and rebellious. XD</p>
-                        <p>I'm trying to learn social sciences like Economics recently.</p>
+                        <p>{{ $t('about.comment.comment1') }}</p>
+                        <p>{{ $t('about.comment.comment2') }}</p>
+                        <p>{{ $t('about.comment.comment3') }}</p>
+                        <p>{{ $t('about.comment.comment4') }}</p>
+                        <p>{{ $t('about.comment.comment5') }}</p>
+                        <p>{{ $t('about.comment.comment6') }}</p>
                     </div>
                 </div>
                 <div class="block about-block22">
-                    <div class="block-title">My Labels</div>
+                    <div class="block-title">{{ $t('about.label.title') }}</div>
                     <div class="learn-container">
                         <span v-for="label in labels" class="learn-item" :style="getLearnLabelStyle()">
                             {{ label }}
@@ -85,13 +85,13 @@ const getLearnLabelStyle = () => {
                     </div>
                 </div>
                 <div class="block about-block23">
-                    <div class="block-title">16Personality</div>
+                    <div class="block-title">{{ $t('about.personality.title') }}</div>
                     <div class="personality-container">
                         <div class="personality-img-box" style="width: 200px; height: 200px; margin: 20px">
                             <img alt="intp" src="@/assets/intp.svg" style="width: 100%; height: 100%; object-fit: cover">
                         </div>
                         <div style="margin: 20px 0 10px; font-size: 28px">INTP-A</div>
-                        <div style="margin: 5px 0 20px; font-size: 20px">Logician</div>
+                        <div style="margin: 5px 0 20px; font-size: 20px">{{ $t('about.personality.job') }}</div>
                     </div>
                 </div>
             </div>

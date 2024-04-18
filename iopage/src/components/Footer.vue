@@ -5,10 +5,10 @@ import router from "@/router/router.js";
 <template>
     <div class="footer-container">
         <div class="footer-links">
-            <a @click="router.push('/')">Home</a>
-            <a @click="router.push('/about')">About</a>
-            <a @click="router.push('/feature')">Feature</a>
-            <a @click="router.push('/note')">Note</a>
+            <a @click="router.push('/')">{{ $t('page.home') }}</a>
+            <a @click="router.push('/about')">{{ $t('page.about') }}</a>
+            <a @click="router.push('/feature')">{{ $t('page.feature') }}</a>
+            <a @click="router.push('/note')">{{ $t('page.note') }}</a>
         </div>
         <div class="footer-copyright">
             <span>Webpage designed by kyliancc</span>

@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'Source Han Serif';
+  src: url('@/assets/SourceHanSerifSC-VF.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --kc-color-hover: #ffbd81;
+  font-family: Inter, math, 'Source Han Serif', sans-serif;
 }
 
 body {
@@ -22,12 +30,10 @@ a:hover {
   box-shadow: var(--el-box-shadow-lighter);
   background-color: white;
   margin: 20px;
-  font-family: Inter, math;
   overflow: hidden;
 }
 
 .block-title {
-  font-family: Inter, math;
   font-weight: bold;
   font-size: 25px;
   margin: 30px 30px 10px;

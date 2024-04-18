@@ -9,25 +9,29 @@ import router from '@/router/router.js'
                 <div class="main-top-container">
                     <div class="block title-block">
                         <div class="title">
-                            <div class="title1">Welcome,</div>
-                            <div class="title2">this is <span class="title-name">kyliancc</span>'s</div>
-                            <div class="title3">personal page.</div>
+                            <div class="title1">{{ $t('home.title.title1') }}</div>
+                            <div class="title2">
+                                {{ $t('home.title.title2Front') }}
+                                <span class="title-name">kyliancc</span>
+                                {{ $t('home.title.title2End') }}
+                            </div>
+                            <div class="title3">{{ $t('home.title.title3') }}</div>
                         </div>
                     </div>
                     <div class="block about-page-block">
-                        <div class="block-title">About this site..</div>
+                        <div class="block-title">{{ $t('home.aboutSite.title') }}</div>
                         <div class="block-text">
-                            <span style="font-weight: bold">Home: </span>
-                            <span>The home page.</span>
+                            <span style="font-weight: bold">{{ $t('page.home') }}: </span>
+                            <span>{{ $t('home.aboutSite.home') }}</span>
                             <hr>
-                            <span style="font-weight: bold">About: </span>
-                            <span>Something about me.</span>
+                            <span style="font-weight: bold">{{ $t('page.about') }}: </span>
+                            <span>{{ $t('home.aboutSite.about') }}</span>
                             <hr>
-                            <span style="font-weight: bold">Feature: </span>
-                            <span>Some features I've made.</span>
+                            <span style="font-weight: bold">{{ $t('page.feature') }}: </span>
+                            <span>{{ $t('home.aboutSite.feature') }}</span>
                             <hr>
-                            <span style="font-weight: bold">Note: </span>
-                            <span>Some notes I've written.</span>
+                            <span style="font-weight: bold">{{ $t('page.note') }}: </span>
+                            <span>{{ $t('home.aboutSite.note') }}</span>
                         </div>
                     </div>
                 </div>
@@ -35,8 +39,8 @@ import router from '@/router/router.js'
                 <div class="recommend-container">
                     <a class="block recommend-item" href="#">
                         <img class="recommend-image" alt="recommend" src="@/assets/yali.png">
-                        <div class="recommend-title">I love you</div>
-                        <div class="recommend-description">I'm just writing something randomly.</div>
+                        <div class="recommend-title">我喜欢你</div>
+                        <div class="recommend-description">随便写点东西。</div>
                     </a>
 
                     <a class="block recommend-item" href="#">
@@ -51,18 +55,18 @@ import router from '@/router/router.js'
             </div>
             <div class="home-aside-container">
                 <div class="block">
-                    <div class="block-title">About me..</div>
+                    <div class="block-title">{{ $t('home.aboutMe.title') }}</div>
                     <div class="about-text">
-                        <p>- Born in 2008.</p>
-                        <p>- Computer Science and Automation enthusiast.</p>
-                        <p>- Active in Central South University.</p>
+                        <p>- {{ $t('home.aboutMe.about1') }}</p>
+                        <p>- {{ $t('home.aboutMe.about2') }}</p>
+                        <p>- {{ $t('home.aboutMe.about3') }}</p>
                         <hr>
-                        <p>I'm a lazy guy, maybe..</p>
-                        <p>I mainly do Artificial Intelligence.</p>
-                        <p>Also do something about Web Frontend/Backend, even Embedded.</p>
+                        <p>{{ $t('home.aboutMe.about4') }}</p>
+                        <p>{{ $t('home.aboutMe.about5') }}</p>
+                        <p>{{ $t('home.aboutMe.about6') }}</p>
                     </div>
                     <div class="about-link">
-                        <a @click="router.push('/about')" style="text-decoration: underline">View more..</a>
+                        <a @click="router.push('/about')" style="text-decoration: underline">{{ $t('home.aboutMe.viewMore') }}</a>
                     </div>
                 </div>
                 <div class="block category-block">
@@ -188,7 +192,6 @@ import router from '@/router/router.js'
 .title {
     display: flex;
     flex-direction: column;
-    font-family: Inter, math;
     padding: 50px;
 }
 
@@ -198,7 +201,7 @@ import router from '@/router/router.js'
 }
 
 .title2 {
-    margin-left: 50%;
+    margin-left: 45%;
     margin-top: 10px;
     font-size: 20px;
 }
@@ -222,10 +225,6 @@ import router from '@/router/router.js'
 .recommend-item {
     flex: 1 300px;
     height: 250px;
-}
-
-.recommend-item > .el-link__inner {
-    display: block;
 }
 
 .recommend-item .recommend-image {
