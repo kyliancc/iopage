@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue';
 import router from '@/router/router.js';
-import i18n from '@/main.js'
+import i18n from '@/i18n/i18n.js'
 
 const translateHover = ref(false);
 const translateTab = ref(false);

@@ -1,3 +1,5 @@
+import { createI18n } from 'vue-i18n'
+
 const enMessages = {
     page: {
         home: 'Home',
@@ -169,4 +171,6 @@ const i18nOptions = {
     }
 }
 
-export default i18nOptions
+const i18n = createI18n(i18nOptions)
+
+export default i18n
