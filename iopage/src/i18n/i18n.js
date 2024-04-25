@@ -1,6 +1,13 @@
 import { createI18n } from 'vue-i18n'
+import featureIndex from '@/features/index.json'
+import noteIndex from '@/notes/index.json'
 
 const enMessages = {
+    lang: {
+        en: 'English',
+        'zh-CN': 'Chinese',
+        ja: 'Japanese'
+    },
     page: {
         home: 'Home',
         about: 'About',
@@ -69,10 +76,29 @@ const enMessages = {
             title: '16Personality',
             job: 'Logician'
         }
+    },
+    feature: {
+        view: {
+            homeTitle: 'Feature Category List'
+        },
+        category: {}
+    },
+    note: {
+        view: {
+            homeTitle: 'Note Category List',
+            categoryTitleFront: 'Notes in category: ',
+            categoryTitleEnd: ''
+        },
+        category: {}
     }
 };
 
 const zhCNMessages = {
+    lang: {
+        en: '英文',
+        'zh-CN': '中文',
+        ja: '日文'
+    },
     page: {
         home: '主页',
         about: '关于',
@@ -141,10 +167,29 @@ const zhCNMessages = {
             title: '16人格',
             job: '逻辑学家'
         }
+    },
+    feature: {
+        view: {
+            homeTitle: '功能分类列表'
+        },
+        category: {}
+    },
+    note: {
+        view: {
+            homeTitle: '笔记分类列表',
+            categoryTitleFront: '',
+            categoryTitleEnd: ' 分类下的笔记'
+        },
+        category: {}
     }
 };
 
 const jaMessages = {
+    lang: {
+        en: '英語',
+        'zh-CN': '中国語',
+        ja: '日本語'
+    },
     page: {
         home: 'ホーム',
         about: 'アバウト',
@@ -153,12 +198,48 @@ const jaMessages = {
     },
     home: {
         title: {
-            title1: 'ようこそ',
+            title1: 'ようこそ、',
             title2Front: 'これは',
             title2End: 'の',
-            title3: '個人ページ.'
+            title3: '個人ページです.'
         }
     },
+    feature: {
+        category: {}
+    },
+    note: {
+        category: {}
+    }
+}
+
+const registerFeatureCategories = () => {
+    let categories = featureIndex.categories;
+    for (let i = 0; i < categories.length; i++) {
+        let id = String(categories[i].id);
+        let translate = categories[i].translate;
+        for (let k in translate) {
+            switch (k) {
+                case 'en': enMessages.feature.category[id] = translate[k]; break;
+                case 'zh-CN': zhCNMessages.feature.category[id] = translate[k]; break;
+                case 'ja': jaMessages.feature.category[id] = translate[k]; break;
+            }
+        }
+    }
+}
+
+const registerNoteCategories = () => {
+    let categories = noteIndex.categories;
+    for (let i = 0; i < categories.length; i++) {
+        let id = String(categories[i].id);
+        let translate = categories[i].translate;
+        for (let k in translate) {
+            switch (k) {
+                case 'en': enMessages.note.category[id] = translate[k]; break;
+                case 'zh-CN': zhCNMessages.note.category[id] = translate[k]; break;
+                case 'ja': jaMessages.note.category[id] = translate[k]; break;
+            }
+        }
+    }
 }
 
 const i18nOptions = {
@@ -171,6 +252,12 @@ const i18nOptions = {
     }
 }
 
-const i18n = createI18n(i18nOptions)
+const createInstance = () => {
+    registerFeatureCategories();
+    registerNoteCategories();
+    return createI18n(i18nOptions);
+}
+
+const i18n = createInstance();
 
 export default i18n

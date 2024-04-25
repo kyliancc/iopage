@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "type": "note",
+            "id": 0
+        }
+    ],
+    "categories": [
+        [
+            {
+                "type": "note",
+                "id": 1
+            }
+        ]
+    ]
+}

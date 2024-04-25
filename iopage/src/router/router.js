@@ -17,12 +17,22 @@ const router = createRouter({
     {
       path: '/feature',
       name: 'feature',
-      component: () => import('../views/feature/FeatureView.vue')
+      component: () => import('../views/feature/FeatureHomeView.vue')
     },
     {
       path: '/note',
       name: 'note',
-      component: () => import('../views/note/NoteView.vue')
+      component: () => import('../views/note/NoteHomeView.vue')
+    },
+    {
+      path: '/feature/category/:id',
+      name: 'featureCategory',
+      component: () => import('../views/feature/FeatureCategoryView.vue')
+    },
+    {
+      path: '/note/category/:id',
+      name: 'noteCategory',
+      component: () => import('../views/note/NoteCategoryView.vue')
     }
   ]
 })

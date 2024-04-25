@@ -1,0 +1,23 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "name": "Artificial Intelligence",
+            "cover": "cover/feature/category/0.png",
+            "translate": {
+                "en": "Artificial Intelligence",
+                "zh-CN": "人工智能",
+                "ja": "AI"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Web Frontend",
+            "cover": "cover/feature/category/0.png",
+            "translate": {
+                "en": "Web Frontend",
+                "zh-CN": "Web前端"
+            }
+        }
+    ]
+}
