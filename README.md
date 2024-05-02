@@ -1,5 +1,5 @@
 # iopage
-Source codes of my io page.
+Source codes of my io page. (this project has been ABANDONED, maybe)
 
 ### Workflow
 - Vue3
